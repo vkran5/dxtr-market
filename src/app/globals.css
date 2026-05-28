@@ -10,6 +10,20 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Brand Primary */
+  --color-primary: #613DE4;
+  --color-primary-hover: #5132C4;
+
+  /* Brand Secondary (Links) */
+  --color-secondary: #6B4EE6;
+  --color-secondary-hover: #5a3fd1;
+
+  /* Surface */
+  --color-surface: #F5F7FC;
+
+  /* Inactive */
+  --color-inactive: #D4D4D4;
 }
 
 @media (prefers-color-scheme: dark) {
