@@ -103,7 +103,7 @@ export function MarketView() {
         {/* User header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gray-200 rounded-full overflow-hidden">
+            <div className="w-10 h-10 bg-gray-200 rounded-lg overflow-hidden">
               <Image src="https://i.pravatar.cc/150?img=11" alt="User" width={40} height={40} className="object-cover" />
             </div>
             <span className="font-semibold text-gray-900">John Johnson</span>

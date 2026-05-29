@@ -44,14 +44,9 @@ export function CryptoList({ items, selectedId, onSelect }: CryptoListProps) {
 
             {/* Info */}
             <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-1">
-                <p className={`font-semibold text-sm truncate ${isSelected ? "text-white" : "text-gray-900"}`}>
-                  {item.symbol}
-                </p>
-                {item.hot && (
-                  <span className="text-xs">🔥</span>
-                )}
-              </div>
+              <p className={`font-semibold text-sm truncate ${isSelected ? "text-white" : "text-gray-900"}`}>
+                {item.symbol}
+              </p>
               <p className={`text-xs truncate ${isSelected ? "text-white/70" : "text-gray-500"}`}>
                 {item.name}
               </p>
