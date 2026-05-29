@@ -150,16 +150,16 @@ export default function OtpPage() {
             priority
           />
         </div>
-        <div className="w-full lg:w-1/2 bg-white flex items-center justify-center p-8">
-          <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-6">
+        <div className="w-full lg:w-1/2 bg-white flex items-center justify-center px-4 sm:px-8">
+          <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-4 sm:space-y-6">
             <div className="text-center">
-              <h1 className="text-2xl font-bold text-gray-900 font-[family-name:var(--font-roboto)]">Confirm your phone</h1>
-              <p className="mt-2 text-sm text-gray-500">
+              <h1 className="text-xl sm:text-2xl font-bold text-gray-900 font-[family-name:var(--font-roboto)]">Confirm your phone</h1>
+              <p className="mt-2 text-xs sm:text-sm text-gray-500">
                 We sent 6 digits code to +{phoneNumber}
               </p>
             </div>
 
-            <div className="flex gap-3 justify-center py-6">
+            <div className="flex gap-1 sm:gap-2 lg:gap-3 justify-center py-4 sm:py-6">
               {otp.map((digit, i) => (
                 <input
                   key={i}
@@ -171,7 +171,7 @@ export default function OtpPage() {
                   onChange={(e) => handleChange(i, e.target.value)}
                   onKeyDown={(e) => handleKeyDown(i, e)}
                   onPaste={i === 0 ? handlePaste : undefined}
-                  className={`w-14 h-16 text-center text-2xl font-bold text-primary bg-surface border-0 border-b-2 rounded px-2 focus:outline-none transition-colors ${
+                  className={`w-10 h-12 sm:w-12 sm:h-14 lg:w-14 lg:h-16 text-center text-lg sm:text-xl lg:text-2xl font-bold text-primary bg-surface border-0 border-b-2 rounded px-1 sm:px-2 focus:outline-none transition-colors ${
                     digit ? "border-primary text-primary" : "border-gray-300 text-gray-400"
                   } ${errorMsg ? "border-red-500" : ""}`}
                 />
@@ -179,7 +179,7 @@ export default function OtpPage() {
             </div>
 
             {errorMsg && (
-              <p className="text-red-500 text-sm text-center">{errorMsg}</p>
+              <p className="text-red-500 text-xs sm:text-sm text-center">{errorMsg}</p>
             )}
 
             <Button
